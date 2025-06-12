@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Document</title>
+
+    <style>
+
+        body, form section{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        body{
+            align-items: center;
+            padding: 5%;
+        }
+
+        form{
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            column-gap: 5%;
+            row-gap: 2%;
+
+           section{
+            padding: 5px;
+            text-align: left;
+            align-items: flex-start;
+            gap: clamp(10px, 1rem, 25px);
+           }
+        }
+
+        input:focus{ border-width: 0.5rem; }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>
+        Bem vindo ao site oficial da Exemplo Pontocom
+    </h1>
+
+    <h2>
+        Preencha este pequeno formulário para efetuar a compra de seu produto.
+    </h2>
+
+    <form action="" method="get">
+
+        <section>
+            <label for="produtoInput"> Produto comprado </label>
+            
+            <input type="text" list="produtoLista" required aria-required="true" id="produtoInput">
+
+            <datalist id="produtoLista">
+
+                <option value="Sapato"></option>
+
+                <option value="Calça jeans"></option>
+
+                <option value="Bermuda"></option>
+
+                <option value="Calça de veludo"></option>
+
+                <option value="Camisa social"></option>
+
+                <option value=""></option>
+
+                <option value="Camiseta"></option>
+
+                <option value="Blusa de frio"></option>
+
+                <option value="Terno"></option>
+
+                <option value="Blazer"></option>
+
+            </datalist>
+
+        </section>
+
+        <section>
+            <label for="nomeInput"> Nome do comprador </label>
+            
+            <input type="text" required autocapitalize aria-required="true" id="nomeInput">
+        </section>
+
+        <section>
+            <label for="emailInput"> Melhor e-mail do comprador </label>
+            
+            <input type="email" required aria-required="true" id="emailInput">
+        </section>
+
+        <section>
+            <label for="telInput"> Melhor número de telefone </label>
+            
+            <input type="tel" required aria-required="true" id="telInput">
+        </section>
+
+        <section>
+            <label for="dataInput"> Data da compra </label>
+            
+            <input type="date" id="dataInput">
+        </section>
+
+        <section>
+            <label for="moradiaInput"> Localidade da moradia </label>
+            
+            <input type="text" list="moradiaLista" id="moradiaInput">
+
+            <datalist id="moradiaLista">
+
+                <option value="Rua Antônio Olimpio de Mourais"></option>
+
+                <option value="Rua Espírito Santo"></option>
+
+                <option value="Rua Goiás"></option>
+
+                <option value="Avenida Primeiro de Junho"></option>
+
+                <option value="Avenida Paraná"></option>
+
+            </datalist>
+
+        </section>
+
+        <section>
+            <label for="idadeInput"> Idade do comprador </label>
+            
+            <input type="text" list="idadeLista" id="idadeInput">
+
+            <datalist id="idadeLista">
+
+                <option value="De 18 a 24 anos"></option>
+
+                <option value="De 25 a 30 anos"></option>
+
+                <option value="De 30 a 40 anos"></option>
+
+                <option value="De 41 a 50 anos"></option>
+
+                <option value="De 51 a 60 anos"></option>
+
+                <option value="Mais que 60 anos"></option>
+
+            </datalist>
+
+        </section>
+
+        <section>
+            <label for="generoInput"> Gênero do comprador </label>
+
+            <legend id="generoInput">
+            
+<input type="radio" name="generoInput">    <input type="radio" name="generoInput">
+
+            </legend>
+        
+        </section>
+
+        <section>
+
+            <label for="statusInput"> Status civil do comprador </label>
+
+            <legend id="statusInput">
+            
+<input type="radio" name="statusInput">   <input type="radio" name="statusInput">
+           
+<input type="radio" name="statusInput">   <input type="radio" name="statusInput">
+
+            </legend>
+
+        </section>
+
+        <button type="submit" id="submitButton"> Enviar formulário </button>
+
+    </form>
+
+    <script src="./crm.js"></script>
+    
+</body>
+</html>
